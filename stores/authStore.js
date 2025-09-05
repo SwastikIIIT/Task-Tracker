@@ -37,6 +37,7 @@ export const useAuthStore = create((set,get) => ({
         const authFunction = authMode === 'login' ? loginUser : signupUser;
         const data = await authFunction(authForm);
 
+           
               if (authMode === 'login')
               {
                 storeAuthData(data.token, data.user);
@@ -59,7 +60,7 @@ export const useAuthStore = create((set,get) => ({
         }  
       catch (error)
       {
-          set({error:'Authentication failed',loading: false });
+          set({error:error.message,loading: false });
           return { success: false };
       }
   },
