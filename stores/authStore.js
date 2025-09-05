@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { loginUser, signupUser } from '@/lib/actions';
-import {  storeAuthData,clearAuthData, getStoredUser, getStoredToken } from '@/lib/utils';
+import {  storeAuthData,clearAuthData, getStoredUser, getStoredToken } from '@/lib/auth';
 
 export const useAuthStore = create((set,get) => ({
   // State
