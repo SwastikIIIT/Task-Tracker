@@ -25,7 +25,7 @@ A modern, full-stack task management and time tracking application built with Ne
 - **Next.js 15** - React framework with App Router
 - **React 19** - UI library
 - **Zustand** - Lightweight state management
-- **Tailwind CSS ** - Utility-first CSS framework
+- **Tailwind CSS** - Utility-first CSS framework
 - **JavaScript** - Main programming language
 
 ### Backend
