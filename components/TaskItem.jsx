@@ -85,13 +85,13 @@ export default function TaskItem({ task }) {
             <>
               <button
                 onClick={handleSave}
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
+                className="cursor-pointer bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
               >
                 Save
               </button>
               <button
                 onClick={() => setIsEditing(false)}
-                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-sm"
+                className="cursor-pointer bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-sm"
               >
                 Cancel
               </button>
@@ -99,7 +99,7 @@ export default function TaskItem({ task }) {
           ) : activeTimeLog?.taskId === task.id ? (
             <button
               onClick={handleStopTimer}
-              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm"
+              className="cursor-pointer bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm"
             >
               Stop
             </button>
@@ -107,19 +107,19 @@ export default function TaskItem({ task }) {
             <>
               <button
                 onClick={handleStartTimer}
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
+                className="cursor-pointer bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
               >
                 Start
               </button>
               <button
                 onClick={() => setIsEditing(true)}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm"
+                className="cursor-pointer bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-900 text-sm"
               >
                 Edit
               </button>
               <button
                 onClick={handleDeleteTask}
-                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-sm"
+                className="cursor-pointer bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 text-sm"
               >
                 Delete
               </button>

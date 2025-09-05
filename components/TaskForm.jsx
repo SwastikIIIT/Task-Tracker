@@ -61,7 +61,7 @@ export default function TaskForm() {
           <button
             type="button"
             onClick={handleAIRefine}
-            className="bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 disabled:opacity-50"
+            className="cursor-pointer bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 disabled:opacity-50"
             disabled={loadingAI}
           >
             {loadingAI ? "Refining..." : "✨ AI Suggest"}
@@ -69,7 +69,7 @@ export default function TaskForm() {
 
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+            className="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
           >
             Create Task
           </button>

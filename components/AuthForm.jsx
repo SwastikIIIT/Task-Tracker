@@ -66,7 +66,7 @@ export default function AuthForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+            className="cursor-pointer w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 disabled:opacity-50"
           >
             {loading ? 'Loading...' : authMode === 'login' ? 'Login' : 'Sign Up'}
           </button>
@@ -76,7 +76,7 @@ export default function AuthForm() {
           {authMode === 'login' ? "Don't have an account? " : "Already have an account? "}
           <button
             onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}
-            className="text-blue-600 hover:underline"
+            className=" cursor-pointer text-blue-600 hover:underline"
           >
             {authMode === 'login' ? 'Sign Up' : 'Login'}
           </button>

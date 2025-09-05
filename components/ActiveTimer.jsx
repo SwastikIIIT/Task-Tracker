@@ -47,7 +47,7 @@ export default function ActiveTimer() {
         </div>
         <button
           onClick={() => stopTimer(token, activeTimeLog.id)}
-          className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
+          className="cursor-pointer bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
         >
           Stop Timer
         </button>
