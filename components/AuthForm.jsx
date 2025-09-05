@@ -1,4 +1,6 @@
+'use client'
 import { useAuthStore } from "@/stores/authStore";
+import { useRouter } from "next/navigation";
 
 
 export default function AuthForm() {
@@ -12,9 +14,15 @@ export default function AuthForm() {
     handleAuth
   } = useAuthStore();
 
+  const router=useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
-    await handleAuth();
+    const result=await handleAuth();
+    
+    if(result.success && result.user)
+    router.push('/');
+
   };
 
   return (

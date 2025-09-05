@@ -8,15 +8,20 @@ import Navbar from './Navbar';
 import AuthForm from './AuthForm';
 import { useTaskStore } from '@/stores/taskStore';
 import { useAuthStore } from '@/stores/authStore';
+import { useRouter } from 'next/navigation';
 
 const HomeComponent = () => {
   const { user, initializeAuth } = useAuthStore();
   const { loadAllData, clearAllData } = useTaskStore();
-
+  const router=useRouter();
 
   useEffect(() => {
     const hasAuth = initializeAuth();
-    if (hasAuth)
+    if(!hasAuth)
+    {
+         router.push('/login');
+    }
+    else
     {
       const token = useAuthStore.getState().token;
       loadAllData(token);
@@ -28,12 +33,10 @@ const HomeComponent = () => {
     if (!user) {
       clearAllData();
     }
-  }, []);
+  }, [user]);
 
 
-  if (!user) {
-    return <AuthForm />;
-  }
+
 
   return (
     <div className="min-h-screen bg-gray-50">

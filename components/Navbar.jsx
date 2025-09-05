@@ -1,10 +1,18 @@
 'use client'
 
 import { useAuthStore } from "@/stores/authStore";
+import { useRouter } from "next/navigation";
 
 
 export default function Navbar() {
   const { user, logout } = useAuthStore();
+  const router=useRouter();
+
+  const handleLogout=()=>{
+      logout();
+      router.push('/login');
+   
+  }
 
   return (
     <header className="bg-white shadow-sm border-b">
@@ -13,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <span className="text-gray-600">Welcome, {user?.name}</span>
           <button
-            onClick={logout}
+            onClick={handleLogout}
             className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
           >
             Logout
