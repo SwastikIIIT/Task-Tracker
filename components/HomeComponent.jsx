@@ -16,18 +16,19 @@ const HomeComponent = () => {
 
   useEffect(() => {
     const hasAuth = initializeAuth();
-    if (hasAuth) {
+    if (hasAuth)
+    {
       const token = useAuthStore.getState().token;
       loadAllData(token);
     }
-  }, [initializeAuth, loadAllData]);
+  }, []);
 
 
   useEffect(() => {
     if (!user) {
       clearAllData();
     }
-  }, [user, clearAllData]);
+  }, []);
 
 
   if (!user) {

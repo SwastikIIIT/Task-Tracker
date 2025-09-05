@@ -1,6 +1,7 @@
-import { getTaskTotalTime } from "@/lib/utils";
+import { formatTime, getTaskTotalTime } from "@/lib/utils";
 import { useAuthStore } from "@/stores/authStore";
 import { useTaskStore } from "@/stores/taskStore";
+import TaskItem from "./TaskItem";
 
 export default function TaskList() {
   const { token } = useAuthStore();
@@ -18,13 +19,13 @@ export default function TaskList() {
             <TaskItem
               key={task.id}
               task={task}
-              activeTimeLog={activeTimeLog}
-              formatTime={formatTime}
-              getTaskTotalTime={(taskId) => getTaskTotalTime(timeLogs, taskId)}
-              onUpdateStatus={(taskId, status) => updateTaskStatus(token, taskId, status)}
-              onStartTimer={(taskId) => startTimer(token, taskId)}
-              onStopTimer={(logId) => stopTimer(token, logId)}
-              onDeleteTask={(taskId) => deleteTask(token, taskId)}
+              // activeTimeLog={activeTimeLog}
+              // formatTime={formatTime}
+              // getTaskTotalTime={(taskId) => getTaskTotalTime(timeLogs, taskId)}
+              // onUpdateStatus={(taskId, status) => updateTaskStatus(token, taskId, status)}
+              // onStartTimer={(taskId) => startTimer(token, taskId)}
+              // onStopTimer={(logId) => stopTimer(token, logId)}
+              // onDeleteTask={(taskId) => deleteTask(token, taskId)}
             />
           ))}
         </div>

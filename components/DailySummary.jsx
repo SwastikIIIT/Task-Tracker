@@ -1,11 +1,14 @@
 import { formatTime } from "@/lib/utils";
+import { useAuthStore } from "@/stores/authStore";
 import { useTaskStore } from "@/stores/taskStore";
+import { useEffect } from "react";
 
 
 export default function DailySummary() {
   const { summary } = useTaskStore();
 
   if (!summary) return null;
+  
 
   return (
     <div className="bg-white rounded-lg shadow p-6 mb-8">

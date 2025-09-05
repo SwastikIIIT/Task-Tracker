@@ -4,7 +4,9 @@ import User from "@/models/User";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  try {
+
+  try
+  {
     await connectToMongo();
 
     const {email,password} = await req.json();
@@ -43,7 +45,9 @@ export async function POST(req) {
       token,
       user: { id: user._id, email: user.email, name: user.name },
     });
-  } catch (error) {
+  }
+  catch(error)
+  {
     console.error("Login error:", error);
     return NextResponse.json(
       { error: "Internal server error" },

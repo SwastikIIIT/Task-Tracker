@@ -24,6 +24,7 @@ async function getDailySummary(req) {
     const taskIds = [
       ...new Set(todayTimeLogs.map((log) => log.taskId.toString())),
     ];
+    
     const tasksWorkedOn = await Task.find({
       _id: { $in: taskIds },
       userId,
