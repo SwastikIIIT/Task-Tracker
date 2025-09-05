@@ -21,7 +21,7 @@ const TimeLogSchema = new mongoose.Schema({
     default: null,
   },
   duration: {
-    type: Number, // Duration in seconds
+    type: Number, 
     default: null,
   },
   createdAt: {
