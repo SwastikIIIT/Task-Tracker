@@ -169,11 +169,11 @@ The application uses JWT-based authentication with the following features:
 ## 🎨 Screenshots
 
 ### LoginForm
-![Dashboard](<img width="1305" height="799" alt="image" src="https://github.com/user-attachments/assets/d5b14a84-a5fb-4813-9a1c-e232f34d9be6" />
+![Dashboard](https://github.com/user-attachments/assets/d5b14a84-a5fb-4813-9a1c-e232f34d9be6
 )
 
 ### DashBoard
-![Task Management](<img width="1505" height="944" alt="image" src="https://github.com/user-attachments/assets/cedd1e06-9889-41f9-8854-da37fec60269" />
+![Task Management](https://github.com/user-attachments/assets/cedd1e06-9889-41f9-8854-da37fec60269
 )
 
 ## 🚀 Deployment
