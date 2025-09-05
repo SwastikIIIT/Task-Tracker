@@ -14,13 +14,12 @@ async function getDailySummary(req) {
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    // Get today's time logs
+
     const todayTimeLogs = await TimeLog.find({
       userId,
       startTime: { $gte: today, $lt: tomorrow },
     });
 
-    // Get tasks worked on today
     const taskIds = [
       ...new Set(todayTimeLogs.map((log) => log.taskId.toString())),
     ];
@@ -30,7 +29,7 @@ async function getDailySummary(req) {
       userId,
     });
 
-    // Calculate totals
+
     const totalTimeTracked = todayTimeLogs.reduce(
       (total, log) => total + (log.duration || 0),
       0

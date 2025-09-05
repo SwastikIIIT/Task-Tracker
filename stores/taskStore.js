@@ -23,8 +23,6 @@ export const useTaskStore = create((set, get) => ({
   error: '',
 
   // Actions
-  // setNewTask: (task) => set({ newTask: task }),
-  
   updateNewTask: (field, value) => set((state) => ({
     newTask: { ...state.newTask, [field]: value }
   })),

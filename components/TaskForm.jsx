@@ -15,7 +15,7 @@ export default function TaskForm() {
       return;
     }
 
-    setError(""); // clear old errors
+    setError(""); 
     setLoadingAI(true);
     const suggestion = await refineTask(newTask.title);
     setLoadingAI(false);
@@ -30,7 +30,7 @@ export default function TaskForm() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // clear error on manual submit
+    setError(""); 
     await createTask(token);
   };
 
@@ -54,11 +54,10 @@ export default function TaskForm() {
           className="p-3 border rounded-lg"
         />
 
-        {/* Error Message */}
+        
         {error && <p className="text-red-600 text-sm">{error}</p>}
 
         <div className="flex gap-4">
-          {/* AI Suggest Button */}
           <button
             type="button"
             onClick={handleAIRefine}

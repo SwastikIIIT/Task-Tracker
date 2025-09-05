@@ -9,7 +9,7 @@ export default function ActiveTimer() {
   const { activeTimeLog, tasks, stopTimer } = useTaskStore();
   const [elapsed, setElapsed] = useState(0);
 
-  // always call useEffect, just bail out if no activeTimeLog
+ 
   useEffect(() => {
     if (!activeTimeLog) return;
 
@@ -20,13 +20,13 @@ export default function ActiveTimer() {
       setElapsed(Math.floor((now - start) / 1000));
     };
 
-    updateElapsed(); // run immediately
+    updateElapsed(); 
     const interval = setInterval(updateElapsed, 1000);
 
     return () => clearInterval(interval);
   }, [activeTimeLog]);
 
-  // if no active log, render nothing (AFTER hooks are called)
+  
   if (!activeTimeLog) return null;
 
   const task = tasks.find((task) => task.id === activeTimeLog.taskId);

@@ -24,7 +24,6 @@ export const useAuthStore = create((set,get) => ({
 
   setAuthMode: (mode) => set({ authMode: mode, error: '' }),
   
-  // setAuthForm: (form) => set({ authForm: form }),
   
   updateAuthForm: (field, value) => set((state) => ({
     authForm: { ...state.authForm, [field]: value }
@@ -75,5 +74,4 @@ export const useAuthStore = create((set,get) => ({
     });
   },
 
-  // clearError: () => set({ error: '' })
 }));

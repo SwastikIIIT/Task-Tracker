@@ -18,7 +18,7 @@ export async function POST(req) {
       );
     }
 
-    // Find user
+  
     const user = await User.findOne({ email });
     if (!user) {
       return NextResponse.json(
@@ -27,7 +27,7 @@ export async function POST(req) {
       );
     }
 
-    // Verify password
+   
     const isValid = await verifyPassword(password, user.password);
     if (!isValid) {
       return NextResponse.json(

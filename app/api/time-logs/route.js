@@ -39,7 +39,7 @@ async function createTimeLog(req) {
       );
     }
 
-    // Check if there's already an active time log
+   
     const activeLog = await TimeLog.findOne({ userId, endTime: null });
     if (activeLog) {
       return NextResponse.json(
