@@ -27,9 +27,6 @@ export const useTaskStore = create((set, get) => ({
     newTask: { ...state.newTask, [field]: value }
   })),
 
-  
-  clearNewTask: () => set({ newTask: { title: '', description: '' } }),
-  
   loadAllData: async (token) => {
     if (!token) return;
     
@@ -72,7 +69,6 @@ export const useTaskStore = create((set, get) => ({
     }
     return false;
   },
-
  
   editTask: async (token, taskId, taskData) => {
   try {
